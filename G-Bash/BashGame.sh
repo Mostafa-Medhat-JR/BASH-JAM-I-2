@@ -429,8 +429,14 @@ function validWordForGuess
   #this loop for validtion for the input of the pickig word
 while true ;
 do
-
+echo -e "Enter a number from 1 to $numOfStrings to pick a word to Guess \n"
 read chosenWord
+
+  if [[ ! "$chosenWord" =~ ^[1-9]+$ ]]; then
+     echo -e "\t invalid input plz enter a valid number\n"
+     continue
+  fi
+
 if [[ $chosenWord -ge $numOfStrings ]]
 then
 echo -e "Invalid choice enter a valid one \n"
@@ -515,7 +521,7 @@ done
 #Gues the word game
 function guessTheWordGame
 {
-echo -e "Enter a number from 1 to $numOfStrings to pick a word to Guess \n"
+
 
   validWordForGuess
   gamePlayGuessGame
@@ -530,6 +536,12 @@ function commandreversefn
 
     echo "enter a number from 1 to $numOfcommands"
     read numPicked
+
+     if [[ ! "$numPicked" =~ ^[1-9]+$ ]]; then
+     echo -e "\t invalid input plz enter a number bet [1000,9999]"
+     continue
+  fi
+
     if [[ $numPicked -le $numOfcommands ]]
   then
     ((numPicked--))
@@ -584,6 +596,11 @@ while true;
 
     echo "enter a number from 1 to $numOfDistro"
     read numPicked
+
+    if [[ ! "$numPicked" =~ ^[1-9]+$ ]]; then
+     echo -e "\t invalid input plz enter a number bet [1000,9999]"
+     continue
+  fi
     if [[ $numPicked -le $numOfDistro ]]
   then
     ((numPicked--))
