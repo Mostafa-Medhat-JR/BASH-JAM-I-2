@@ -41,6 +41,7 @@ Revealed word, password, command, or distro when game ends
 
 --------------------------------------------------------------------------------
 - Idea name: funnyThing
+
 By: Ali Ahmed
 
 Description: A script that displays a random meme (image or video) from a "meme-base" (Like how with data we have data-base, code -> code-base, etc). What makes this special is that you can add any image/video to the meme-base and you can divide the it into folders if you wish (like how I have "programmingMemes" in the example). The script is designed to be bound to a keyboard shortcut for quick access, providing brief moments of entertainment or stress relief during intense study or work sessions.
