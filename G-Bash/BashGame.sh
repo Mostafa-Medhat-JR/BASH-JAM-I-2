@@ -197,7 +197,7 @@ function hintGuessGame
   while true;
   do
      echo "which type of hint you want "
-  echo -e "\t\t 1)description \t 2)tell you a letter"
+  echo -e "\t\t 1)description \t 2)tell you a letter \t 0)Back"
     read choiceNum
 
 
@@ -239,6 +239,10 @@ continue
 
     letterHint=0
     break;;
+  0)
+    break;;
+
+
   *)
     echo "invalid choice pls enter a valid one\n";;
   esac
@@ -319,7 +323,7 @@ function passwordGamePlay
               read guesspass1
 
                if [[ ! "$guesspass1" =~ ^[0-9]+$ ]]; then
-                  echo -e "\t invalid input plz enter a number bet [1000,9999]"
+                  echo -e "\t invalid input plz enter a number bet [1000,9999]\n"
                   continue
                fi
 
@@ -432,12 +436,12 @@ do
 echo -e "Enter a number from 1 to $numOfStrings to pick a word to Guess \n"
 read chosenWord
 
-  if [[ ! "$chosenWord" =~ ^[1-9]+$ ]]; then
+  if [[ ! "$chosenWord" =~ ^[0-9]+$ ]]; then
      echo -e "\t invalid input plz enter a valid number\n"
      continue
   fi
 
-if [[ $chosenWord -ge $numOfStrings ]]
+if [[ $chosenWord -gt $numOfStrings ]]
 then
 echo -e "Invalid choice enter a valid one \n"
 elif [[ $chosenWord -le 0 ]]
@@ -538,7 +542,7 @@ function commandreversefn
     read numPicked
 
      if [[ ! "$numPicked" =~ ^[1-9]+$ ]]; then
-     echo -e "\t invalid input plz enter a number bet [1000,9999]"
+     echo -e "\t invalid input plz enter a valid number\n"
      continue
   fi
 
@@ -598,7 +602,7 @@ while true;
     read numPicked
 
     if [[ ! "$numPicked" =~ ^[1-9]+$ ]]; then
-     echo -e "\t invalid input plz enter a number bet [1000,9999]"
+     echo -e "\t invalid input plz enter a vaild number\n"
      continue
   fi
     if [[ $numPicked -le $numOfDistro ]]
