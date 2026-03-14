@@ -268,6 +268,7 @@ function passwordPlayerOneValidation
         continue
         fi
 
+
       if [[ $pass1 -lt $minPassLimit ]]
             then
               echo -e "\t--> the password is small than 4 numbers pls enter a valid one"
@@ -310,7 +311,7 @@ function passwordPlayerTwoValidation
 #this fn handle the gameplay for the password Game
 function passwordGamePlay
 {
-   while true ;
+   while true ;f
     do
         counter1=0
         counter2=0
@@ -541,11 +542,14 @@ function commandreversefn
     echo "enter a number from 1 to $numOfcommands"
     read numPicked
 
-     if [[ ! "$numPicked" =~ ^[1-9]+$ ]]; then
+     if [[ ! "$numPicked" =~ ^[0-9]+$ ]]; then
      echo -e "\t invalid input plz enter a valid number\n"
      continue
   fi
-
+    if [[  $numPicked -eq 0 ]]; then
+     echo -e "\t invalid input plz enter a valid number\n"
+     continue
+      fi
     if [[ $numPicked -le $numOfcommands ]]
   then
     ((numPicked--))
@@ -601,10 +605,16 @@ while true;
     echo "enter a number from 1 to $numOfDistro"
     read numPicked
 
-    if [[ ! "$numPicked" =~ ^[1-9]+$ ]]; then
+    if [[ ! "$numPicked" =~ ^[0-9]+$ ]]; then
      echo -e "\t invalid input plz enter a vaild number\n"
      continue
   fi
+  if [[  $numPicked -eq 0 ]]; then
+     echo -e "\t invalid input plz enter a valid number\n"
+     continue
+  fi
+
+
     if [[ $numPicked -le $numOfDistro ]]
   then
     ((numPicked--))
