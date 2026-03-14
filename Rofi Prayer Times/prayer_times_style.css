@@ -1,0 +1,23 @@
+window {
+    background-color: rgba(46, 70, 48, 0.8);
+    border-radius: 6px;
+    padding: 5px 8px;
+}
+
+entry {
+    color: #eceff4;
+    font: 14px Monospace;
+    padding: 3px 6px;
+    background-color: transparent;
+}
+
+row {
+    color: #d8dee9;
+    padding: 2px 5px;
+    background-color: transparent;
+}
+
+row:selected {
+    background-color: rgba(94, 129, 172, 0.6);
+    color: #eceff4;
+}
