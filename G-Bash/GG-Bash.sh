@@ -311,7 +311,7 @@ function passwordPlayerTwoValidation
 #this fn handle the gameplay for the password Game
 function passwordGamePlay
 {
-   while true ;f
+   while true ;
     do
         counter1=0
         counter2=0
